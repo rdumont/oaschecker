@@ -73,7 +73,7 @@ func (c *Middleware) Validate() error {
 		descriptions[i] = fmt.Sprintf("%v %v: %v", issue.Method, issue.URI, issue.Description)
 	}
 
-	return fmt.Errorf("Errors were found validating the API specification:\n%v",
+	return fmt.Errorf("failed API validation:\n%v",
 		strings.Join(descriptions, "\n---\n"))
 }
 
